@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang=”en”>
-  <head>
+<html lang="en">
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,9 +58,43 @@
         </nav>
       </nav>
   </head>
-<body> 
-
-
-
+</head>
+<body>
+    <div class="contenedor__registro">
+        <h3>Registra un nuevo proveedor</h3>
+        <form action="#" class="formulario__register" method="POST" onsubmit="felicitarCrea()">
+            {%csrf_token%}
+          <h2>Regístrar</h2>
+          <div class="row">
+            {{usuario_form.NomCompleto}}
+          </div>
+          <div class="row">
+            {{usuario_form.NumId}}
+          </div>
+          <div class="row">
+            {{usuario_form.email}}
+          </div>
+          <div class="row">
+            {{usuario_form.foto}}
+          </div>
+          <div class="row">
+            {{usuario_form.telefono}}
+          </div>
+          <div class="row">
+            {{usuario_form.pais}}
+          </div>
+          <div class="row">
+            {{usuario_form.direccion}}
+          </div>
+          <div class="row">
+            {{usuario_form.contraseña}}
+          </div>
+          <div class="row">
+            {{usuario_form.tipMoneda}}
+          </div>
+          <button type="submit" class="form-control" value="enviar">Regístrarse</button>
+          </form>
+    </div>
+    
 </body>
 </html>
