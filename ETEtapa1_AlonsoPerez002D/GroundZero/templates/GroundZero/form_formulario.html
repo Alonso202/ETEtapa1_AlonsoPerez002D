@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang=”en”>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<!--mi estilo-->
+{%load static%}
+    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+
+    <title>Fundación Cruzada Animal</title>
+    <!--menu-->
+        {%load static%}
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+            <div class="container">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/">
+                
+                <img src="{% static 'core/img/3f53affd29a440df923c83da9c261d79.png'%}"width="100" height="100" alt=""class="img-ts rounded float-xs-left" > Fundación Cruzada Animal Chile
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quienes somos.html">Quiénes Somos </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:8000/galeria">Galería De Fotos </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Mas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="http://127.0.0.1:8000/login_registro">Inicio Sesion Registro</a>
+                    <a class="dropdown-item" href="contacto.html">Contacto</a> 
+                    <a class="dropdown-item" href="Tienda.html">Catalogo</a>  
+                    </div>
+                </li>
+                <li>
+                    <img class ="iconos-reader-header" src="img/SITIO RAIZ_images_svg_facebook-logo-button.svg"alt="">
+                    <img class ="iconos-reader-header" src="img/SITIO RAIZ_images_svg_instagram-logo.svg" alt="">
+                    <img class ="iconos-reader-header" src="img/SITIO RAIZ_images_svg_twitter-logo-button.svg" alt="">
+                </li>
+                </ul>
+            </div>        
+            </div><!--fin container-->
+    
+        </nav>
+      </nav>
+  </head>
+<body> 
+
+
+
+</body>
+</html>
