@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 <!--mi estilo-->
 {%load static%}
-    <link rel="stylesheet" href="{% static 'core/css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'GroundZero/css/estilos.css' %}">
 
-    <title>Fundación Cruzada Animal</title>
+    <title>GroundZero</title>
     <!--menu-->
         {%load static%}
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -36,21 +36,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:8000/galeria">Galería De Fotos </a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle"href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Mas
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="http://127.0.0.1:8000/login_registro">Inicio Sesion Registro</a>
-                    <a class="dropdown-item" href="contacto.html">Contacto</a> 
-                    <a class="dropdown-item" href="Tienda.html">Catalogo</a>  
-                    </div>
-                </li>
-                <li>
-                    <img class ="iconos-reader-header" src="img/SITIO RAIZ_images_svg_facebook-logo-button.svg"alt="">
-                    <img class ="iconos-reader-header" src="img/SITIO RAIZ_images_svg_instagram-logo.svg" alt="">
-                    <img class ="iconos-reader-header" src="img/SITIO RAIZ_images_svg_twitter-logo-button.svg" alt="">
-                </li>
+                
                 </ul>
             </div>        
             </div><!--fin container-->
@@ -59,7 +45,24 @@
       </nav>
   </head>
 <body> 
+    <div class="__contenedor_todo">
+        <div class="contenedor_opciones centrado  ">
 
+
+            <section style="background-color: #fff;">
+                <button type="button" class="btn btn-primary" >
+                    <a href="http://127.0.0.1:8000/form_reg_prov">
+                        <img src="{% static 'core/img/agregar-usuario.png'%}" width="240x" height="240px"><br>Ingreso de Proveedores</a></button>
+                <button type="button" class="btn btn-primary" >
+                    <a href="http://127.0.0.1:8000/form_formulario">
+                    <img src="{% static 'core/img/quitar-usuario.png'%}" width="240px" height="240px"></a></button>
+                <button type="button" class="btn btn-primary" >
+                    <a href="https://twitter.com/fcruzadaanimal">
+                        <img src="{% static 'core/img/lista-de-verificacion.png'%}" width="240px" height="240px"></a></button>
+                        <!--falta modificar,mostrar y-->
+              </section>
+        </div>
+    </div>
 
 
 </body>
