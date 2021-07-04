@@ -8,14 +8,22 @@ def index(request):
 def home(request):
     return render(request,'home.html' )
 def form_reg_prov(request):
+
+    data = {
+        'form': ProvForm()
+    }
+
     if request.method == 'POST':
-        proveedor_form = ProvForm(data=request.POST, files=request.FILES)
-        if proveedor_form.is_valid():
-            proveedor_form.save()
-            return redirect('index')
+        formulario = ProvForm(data=request.POST, files=request.FILES)
+        if formulario.is_valid():
+            formulario.save()
+            data["mensaje"] = "guardado correctamente"
         else:
-            proveedor_form=ProvForm()
-        return render(request,'GroundZero/form_reg_prov.html',{'proveedor_form':proveedor_form})
+            data['form'] = formulario
+
+    
+    return render(request, 'GroundZero/form_reg_prov.html', data)
+
 def listado(request):
     proveedores= proveedor.objects.all()
     data={

@@ -45,37 +45,48 @@
   
   
   </form>
-    <div class="contenedor__registro ">
+    <div class="contenedor__registro container" style="position: static;">
         <h3>Registra un nuevo proveedor</h3>
         <form action="#" class="formulario__register" method="POST" enctupe="multipart/form-data">
             {%csrf_token%}
           <h2>Regístrar</h2>
           <div class="row">
-            {{proveedor_form.NombreCompleto}}
+            <label for="nombre">Ingrese Nombre:</label>&nbsp;&nbsp;&nbsp;
+            {{form.NombreCompleto}}
           </div>
           <div class="row">
-            {{proveedor_form.NumeroIden}}
+            <label for="NumeroIden">Ingrese Numero de Identificación:</label>&nbsp;&nbsp;&nbsp;
+            {{form.NumeroIden}}
           </div>
           <div class="row">
-            {{proveedor_form.email}}
+            <label for="email">Ingrese correo electronico:</label>&nbsp;&nbsp;&nbsp;
+            {{form.email}}
           </div>
           <div class="row">
-            {{proveedor_form.Fotografia}}
+            <label for="Fotografia" enctupe="multipart/form-data">Ingrese logo de proveedor:</label>&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
+            {{form.Fotografia}}
           </div>
           <div class="row">
-            {{proveedor_form.Telefono}}
+            <label for="Telefono">Ingrese numero telefonico: </label>&nbsp;&nbsp;&nbsp;
+            {{form.Telefono}}
           </div>
           <div class="row">
-            {{proveedor_form.Pais}}
+            <label for="Pais">Ingrese Pais:</label>&nbsp;&nbsp;&nbsp;
+            {{form.Pais}}
+            
           </div>
           <div class="row">
-            {{proveedor_form.direccion}}
+            <label for="direccion">Ingrese dirección</label>&nbsp;&nbsp;&nbsp;
+            {{form.direccion}}
           </div>
           <div class="row">
-            {{proveedor_form.Pass}}
+            <label for="Pass">Ingrese Contraseña</label>&nbsp;&nbsp;&nbsp;
+            {{form.Pass}}
           </div>
           <div class="row">
-            {{proveedor_form.TipMoneda}}
+            <label for="TipMoneda">Ingrese Tipo de Moneda</label>&nbsp;&nbsp;&nbsp;
+            {{form.TipMoneda}}
           </div>
           <div class="d-flex justify-content-end">
             <input type="submit" value="Guardar" class="btn btn-primary">

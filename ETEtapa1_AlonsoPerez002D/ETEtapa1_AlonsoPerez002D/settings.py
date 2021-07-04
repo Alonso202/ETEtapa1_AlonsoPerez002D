@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'GroundZero',
-    'phone_field'
+    'phone_field',
+    'crispy_forms',
 ]
+CRISPY_TEMPLATE_PACK = 'boostrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
