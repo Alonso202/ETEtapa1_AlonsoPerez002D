@@ -10,6 +10,7 @@
 <!--mi estilo-->
 {%load static%}
     <link rel="stylesheet" href="{% static 'GroundZero/css/estilos.css'%}">
+    <link rel="stylesheet" href="{% static 'GroundZero/js/script.js'%}">
 
     <title>GroundZero</title>
 <!--menu-->
@@ -31,8 +32,8 @@
             <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"  href="http://127.0.0.1:8000/form_reg_prov">Agregar nuevos Proveedores</a>
-      </li>
+            <a class="nav-link"  href="http://127.0.0.1:8000/form_reg_prov">Agregar nuevos Proveedores</a>
+        </li>
         <li class="nav-item">
             <a class="nav-link"  href="http://127.0.0.1:8000/listado">Listado de Proveedores</a>
         </li>
@@ -42,43 +43,27 @@
     </div><!--fin container-->
 
 </nav>
-  </head>
-<body class="colorsnow"> 
-    <div class="__contenedor_todo colorsnow container">
-        <br> <br> <br> 
-        <table class="table table-striped table-hover table-responsive-sm colorsnow border">
-            <tr>
-                <th class="colorsnow">Imagen</th>
-                <th class="colorsnow">Nombre</th>
-                <th class="colorsnow">Dirección</th>
-                <th class="colorsnow">Email</th>
-                <th class="colorsnow">Telefono</th>
-                <th class="colorsnow">Opciones</th>
-                
-            </tr>
-        {%for p in proveedores %}
-            <tr >
-                <td class="colorsnow">{%if p.Fotografia %}
-                    <img src="{{ p.Fotografia.url }}"class="colorsnow" width="125" height="125"alt="imagen Proveedor">
-                    {% endif %}
-                </td>
-                <td class="colorsnow">{{p.NombreCompleto | title}}</td>
-                <td class="colorsnow">{{p.direccion | title}}</td>
-                <td class="colorsnow">{{p.email}}</td>
-                <td class="colorsnow">{{p.Telefono}}</td>
-                <td class="colorsnow">{{p.NumeroIden}}</td>
-                <td class="colorsnow">
-                    <a href="{% url 'modificar' p.NumeroIden %}" class="btn btn-info btn-sm">modificar</a>
-                    <a href="{% url 'eliminar' p.NumeroIden %}" class="btn btn-danger btn-sn">eliminar</a>
-                </td> 
-            </tr>
+</head>
+<body>
 
-        {% endfor %}
-        </table>
-    <br> <br> <br> 
+    <div class="row">
+      <div class="col-12 col-md-6 offset-md-3">
+        <div class="card">
+          <div class="card-body">
+              <h2>Modificar proveedor</h2>
+              <hr>
+            <form action="" method="POST"  enctype="multipart/form-data" onsubmit=felicitarCrea()>
+              {% csrf_token %}
+              {{ form.as_p }}
+              <div class="d-flex justify-content-end">
+                <input type="reset" value="Cancelar" class="btn btn-secondary">
+                <input type="submit" value="Modificar" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-
-
 </body>
 <footer class="page-footer font-small unique-color-dark border-top">
     <br>
