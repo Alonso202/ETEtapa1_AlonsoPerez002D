@@ -9,7 +9,7 @@ var formulario_register = document.querySelector(".formulario__register");
 var caja_trasera_login = document.querySelector(".caja__trasera-login");
 var caja_trasera_register = document.querySelector(".caja__trasera-register");
 function felicitarCrea(){
-    alert("Felicidades a creado usuario con exito")
+    alert("Felicidades a agregado proveedor con exito")
 }
 function felicitarinic(){
     alert("Felicidades a iniciado sesión con exito")
