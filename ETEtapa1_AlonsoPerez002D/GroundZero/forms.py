@@ -2,17 +2,17 @@ from django import forms
 from django.forms import ModelForm, fields,widgets
 from .models import proveedor
 
-class UsuarioForm(ModelForm):
+class ProvForm(ModelForm):
     class Meta:
         model = proveedor
-        fields = ['NomCompleto','email','direccion','contraseña','NumeroIden','Fotografia','Telefono','pais','TipMoneda']
+        fields = ['NombreCompleto','email','direccion','Pass','NumeroIden','Fotografia','Telefono','Pais','TipMoneda']
        
-        widgets={
-            'NomCompleto': forms.TextInput(
+        widgets= {
+            'NombreCompleto': forms.TextInput(
                 attrs={
                     'class':'form-control',
                     'placeholder':'Nombre Completo',
-                    'id':'NomCompleto'
+                    'id':'NombreCompleto'
                 }
             ),
             'email':forms.EmailInput(
@@ -33,14 +33,14 @@ class UsuarioForm(ModelForm):
                 attrs={
                     'class':'form-control',
                     'placeholder':'Contraseña',
-                    'id':'contraseña'
+                    'id':'pass'
                 }
             ),
             'NumeroIden':forms.TextInput(
                 attrs={
                     'class':'form-control',
                     'placeholder':'Numero de Identificación',
-                    'id':'NumId'
+                    'id':'NumeroIden'
                 }
             ),
             'Telefono':forms.NumberInput(
@@ -54,12 +54,15 @@ class UsuarioForm(ModelForm):
                 attrs={
                     'class':'form-control',
                     'placeholder':'Numero de identificación',
-                    'id':'telefono'
+                    'id':'pais'
                 }
             ),
-
-
-            
+            'Fotografia':forms.ClearableFileInput(),
+            'TipMoneda':forms.NumberInput(
+                attrs={
+                    'class':'form-control',
+                    'placeholder':'Tipo Moneda',
+                    'id':'TipMoneda'
+                }
+            ),
         }
-
-

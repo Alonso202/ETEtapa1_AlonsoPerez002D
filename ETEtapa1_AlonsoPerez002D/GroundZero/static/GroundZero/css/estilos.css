@@ -1,0 +1,32 @@
+
+
+.__contenedor_todo{
+    text-align: center;
+    color: blue;
+    font-family:Arial;
+    
+
+}
+.colorsnow{
+    background-color: snow; border: none; border-radius: 5px; font-family:Arial;
+}
+.menu{
+    background-color: #fff;
+    color: blue;
+    font-family:Arial;
+}
+.responsive{
+    width: 100%;
+    height: auto;
+  }
+
+*{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: blue;
+    font-family:Arial;
+    background-color: #fff;
+}
+
