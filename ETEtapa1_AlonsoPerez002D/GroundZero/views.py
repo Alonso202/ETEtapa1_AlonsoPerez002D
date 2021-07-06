@@ -14,7 +14,10 @@ def form_reg_prov(request):
     if request.method == 'POST':
         formulario = ProvForm(data=request.POST, files=request.FILES)
         if formulario.is_valid():
+            
             formulario.save()
+
+            nuevapass proveedor.objects.get()
             data["mensaje"] = "guardado correctamente"
         else:
             data['form'] = formulario
